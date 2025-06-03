@@ -1,100 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto API B – 500 anos de Camões</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0e0e0;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .intro {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 30px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-        }
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .galeria img {
-            max-width: 300px;
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .galeria img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9em;
-        }
-        .voltar-topo {
-            display: block;
-            text-align: center;
-            margin: 30px;
-            font-size: 1em;
-            color: #555;
-            text-decoration: none;
-        }
-        .voltar-topo:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto API B – 500 anos de Camões</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h3 {
+      margin-top: 10px;
+      font-size: 1.6em;
+      color: #ffc107;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 30px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .galeria img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    .voltar-topo {
+      display: block;
+      text-align: center;
+      margin: 30px;
+      font-size: 1em;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .voltar-topo:hover {
+      text-decoration: underline;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid white;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>500 anos de Luís de Camões</h1>
-    <h3>O caderno perdido de Camões</h3>
+  <h1>500 anos de Luís de Camões</h1>
+  <h3>O Caderno Perdido de Camões</h3>
 </header>
 
 <section class="intro">
-    <p><strong>Este projeto consistiu na criação de uma composição visual que articulasse:</strong></p>
-    <ul>
-        <li>A figura histórica de Camões (retratada de forma artística);</li>
-        <li>Elementos dos feitos gloriosos dos portugueses descritos em <em>Os Lusíadas</em>;</li>
-        <li>Um estilo visual moderno e cativante, inspirado em tendências do TikTok.</li>
-    </ul>
-    <p>Através do GIMP, foram aplicadas técnicas de montagem, sobreposição de camadas, recorte, filtros artísticos e composição cromática, desenvolvendo competências técnicas e estéticas.</p>
-    <p><strong>👉 Clique nas imagens abaixo para visualizar o trabalho:</strong></p>
+  <p><strong>Este projeto consistiu na criação de uma composição visual que articulasse:</strong></p>
+  <ul>
+    <li>A figura histórica de Camões (retratada de forma artística);</li>
+    <li>Elementos dos feitos gloriosos dos portugueses descritos em <em>Os Lusíadas</em>;</li>
+    <li>Um estilo visual moderno e cativante, inspirado em tendências do TikTok.</li>
+  </ul>
+  <p>Através do GIMP, foram aplicadas técnicas de montagem, sobreposição de camadas, recorte, filtros artísticos e composição cromática, desenvolvendo competências técnicas e estéticas.</p>
+  <p><strong>👉 Clique nas imagens abaixo para visualizar o trabalho:</strong></p>
 </section>
 
 <section class="galeria">
-    <img src="imagens/capa.png" alt="Capa">
-    <img src="imagens/lisboa.png" alt="Lisboa">
-    <img src="imagens/adamastor.png" alt="Adamastor">
-    <img src="imagens/selfie.png" alt="Selfie">
-    <!-- Adicione mais imagens conforme necessário -->
+  <img src="imagens/capa.png" alt="Capa" onclick="abrirLightbox(this.src)">
+  <img src="imagens/lisboa.png" alt="Lisboa" onclick="abrirLightbox(this.src)">
+  <img src="imagens/adamastor.png" alt="Adamastor" onclick="abrirLightbox(this.src)">
+  <img src="imagens/selfie.png" alt="Selfie" onclick="abrirLightbox(this.src)">
 </section>
 
 <a class="voltar-topo" href="#top">🔝 Voltar ao topo</a>
 
 <footer>
-    Desenvolvido por: Ana Vigo & Diana Marques | 12.ºB | Aplicações Informáticas B © Escola Secundária de Marco de Canaveses
+  Desenvolvido por: Ana Vigo & Diana Marques | 12.ºB | Aplicações Informáticas B © Escola Secundária de Marco de Canaveses
 </footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+  <img id="imagemAmpliada" src="" alt="Imagem ampliada">
+</div>
+
+<script>
+  function abrirLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('imagemAmpliada');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function fecharLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
