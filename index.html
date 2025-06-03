@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <title>500 Anos de Luís de Camões – Projeto DAC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 1em;
-      text-align: center;
-    }
-    main {
-      padding: 2em;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1em;
-    }
-    .galeria img {
-      width: 100%;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-    }
-    footer {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 1em;
-      margin-top: 2em;
-    }
-    a {
-      color: #0066cc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto API B – 500 anos de Camões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .intro {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .galeria img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .galeria img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+        .voltar-topo {
+            display: block;
+            text-align: center;
+            margin: 30px;
+            font-size: 1em;
+            color: #555;
+            text-decoration: none;
+        }
+        .voltar-topo:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Projeto DAC – 500 Anos de Luís de Camões</h1>
-  </header>
+<header>
+    <h1>500 anos de Luís de Camões</h1>
+</header>
 
-  <main>
+<section class="intro">
     <p><strong>Este projeto consistiu na criação de uma composição visual que articulasse:</strong></p>
     <ul>
-      <li>A figura histórica de Camões (retratada de forma artística);</li>
-      <li>Elementos que remetem para os feitos gloriosos dos portugueses descritos em <em>Os Lusíadas</em>;</li>
-      <li>Um estilo visual moderno e cativante, inspirado nas tendências das redes sociais, especialmente o formato criativo observado em vídeos do TikTok.</li>
+        <li>A figura histórica de Camões (retratada de forma artística);</li>
+        <li>Elementos dos feitos gloriosos dos portugueses descritos em <em>Os Lusíadas</em>;</li>
+        <li>Um estilo visual moderno e cativante, inspirado em tendências do TikTok.</li>
     </ul>
+    <p>Através do GIMP, foram aplicadas técnicas de montagem, sobreposição de camadas, recorte, filtros artísticos e composição cromática, desenvolvendo competências técnicas e estéticas.</p>
+    <p><strong>👉 Clique nas imagens abaixo para visualizar o trabalho:</strong></p>
+</section>
 
-    <p>Os alunos utilizaram o GIMP para aplicar técnicas de montagem, sobreposição de camadas, recorte de elementos, filtros artísticos e composição cromática, desenvolvendo competências técnicas e estéticas no âmbito da disciplina de Tecnologias Aplicadas e do DAC da turma.</p>
+<section class="galeria">
+    <img src="imagens/capa.png" alt="Capa">
+    <img src="imagens/lisboa.png" alt="Lisboa">
+    <img src="imagens/adamastor.png" alt="Adamastor">
+    <img src="imagens/selfie.png" alt="Selfie">
+    <!-- Adicione mais imagens conforme necessário -->
+</section>
 
-    <h2>👉 Clique nas imagens abaixo para visualizar o trabalho:</h2>
+<a class="voltar-topo" href="#top">🔝 Voltar ao topo</a>
 
-    <div class="galeria">
-      <img src="imagens/capa.png" alt="Trabalho 1">
-      <img src="imagens/lisboa.png" alt="Trabalho 2">
-      <img src="imagens/adamastor.png" alt="Trabalho 3">
-      <img src="imagens/selfie.png" alt="Trabalho 3">
-      <!-- Adicione mais imagens conforme necessário -->
-    </div>
-  </main>
-
-  <footer>
-    <p>Trabalho realizado pelos alunos da turma 12.ºB</p>
-    <p>Beatriz Silva, João Costa, Marta Nunes, Rafael Lopes, Sofia Teixeira</p>
-    <p>&copy; 2025 Escola Secundária</p>
-  </footer>
+<footer>
+    Desenvolvido por: Ana Vigo & Diana Marques | 12.ºB | Aplicações Informáticas B © Escola Secundária de Marco de Canaveses
+</footer>
 
 </body>
 </html>
